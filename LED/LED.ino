@@ -30,7 +30,7 @@ void loop() {
 
   if(millis()-time > 1000)     //Millis gibt die Laufzeit wieder, ist diese abzüglich time größer 1000 wird die Bedingung ausgeführt
   {
-    GRN_Status = !GRN_Status;         //Setze den Status NOT Status
+    GRN_Status = !GRN_Status;         //Invertiere den Status der LED
     digitalWrite(LED_GRN, GRN_Status);  //Schreibe den neuen Zustand
     time = millis();           //Schreibe die aktuelle Zeit in time, damit Laufzeit minus time 0 ergibt
   }
