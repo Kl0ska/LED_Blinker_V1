@@ -8,16 +8,16 @@
  */
 
 
-int LED_GRN = 4; //Variable für den Ausgangspin der LED Grün
+#define LED_GRN 4 //Variable für den Ausgangspin der LED Grün
 
 unsigned long time = millis();  //Variable um die Zeit zu speichern für das Blinken
 
-int GRN_Status = 1;  //Variable für den Status, den die LED haben soll
+bool GRN_Status = false;  //Variable für den Status, den die LED haben soll
 
 void setup() {
 
 //Pin zuweisen für die grüne LED
-  pinMode(4, OUTPUT);
+  pinMode(LED_GRN, OUTPUT);
 
 //Initialisiere die serielle Kommunikation
   Serial.begin(9600);
